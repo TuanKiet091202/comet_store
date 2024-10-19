@@ -57,7 +57,7 @@ const AddressForm = () => {
          console.log('Cart Items:', JSON.parse(cartItems || '[]'));
          console.log('Shipping Address:', JSON.parse(shippingAddress || '{}'));
 
-         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+         const res = await fetch(`http://localhost:3000/api/checkout`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
